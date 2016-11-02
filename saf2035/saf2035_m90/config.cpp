@@ -7,11 +7,11 @@ class CfgPatches
 			"SAF_M90_Sniper_base"
 		};
 		weapons[] = {
-			
+
 		};
 		requiredVersion = 1.62;
 		requiredAddons[] = {
-			
+
 		};
 		author = "Kimukun";
 		version = 1.0;
@@ -1002,7 +1002,7 @@ class CfgVehicles
 			"SmokeShell",
 			"Laserbatteries"
 		};
-		respawnLinkedItems[] = 
+		respawnLinkedItems[] =
 		{
 			"SAF_M90_PC_lite",
 			"SAF_M90_Boonie",
@@ -1013,7 +1013,7 @@ class CfgVehicles
 			"ItemGPS",
 			"NVGoggles_INDEP"
 		};
-		respawnMagazines[] = 
+		respawnMagazines[] =
 		{
 			"30Rnd_556x45_Stanag",
 			"30Rnd_556x45_Stanag",
@@ -1041,7 +1041,7 @@ class CfgVehicles
 			"SmokeShell",
 			"Laserbatteries"
 		};
-		respawnWeapons[] = 
+		respawnWeapons[] =
 		{
 			"SAF_AK6GL_khk_SP",
 			"hgun_P07_F",
@@ -1054,7 +1054,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		threat[] = {1,0.1,0.30000001};
-		weapons[] = 
+		weapons[] =
 		{
 			"SAF_AK6GL_khk_SP",
 			"hgun_P07_F",
@@ -1417,42 +1417,249 @@ class cfgWeapons
 			};
 		};
 	};
-	//Weapons
-	class arifle_SPAR_01_base_F;
-	class arifle_SPAR_01_GL_base_F;
-	class arifle_SPAR_03_base_F;
-	class LMG_03_base_F;
-	class srifle_LRR_F;
-	class launch_NLAW_F;
-	class SMG_05_F;
-	class launch_B_Titan_short_F;
-	class launch_I_Titan_short_F;
-	class hgun_P07_khk_F;
-	class SAF_AK6_base_khk: arifle_SPAR_01_base_F
+};
+class cfgGroups
+{
+	class West
 	{
-		access = 1;
-		displayName = "AK6 (Green)";
-		dlc = "SAF2035_Mod";
-		scope = 2;
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_khk_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_khk_F_02_co.paa"};
-		picture = "\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\UI\arifle_SPAR_01_khk_F_X_CA.paa";
-	};
-	class SAF_AK6GL_base_khk: arifle_SPAR_01_GL_base_F
-	{
-		access = 1;
-		displayName = "AK6GL (Green)";
-		dlc = "SAF2035_Mod";
-		scope = 2;
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_khk_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_khk_F_02_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_GL_khk_F_01_co.paa"};
-		picture = "\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\UI\arifle_SPAR_01_GL_khk_F_X_CA.paa";
-	};
-	class SAF_AK6B_base_khk: arifle_SPAR_03_base_F
-	{
-		access = 1;
-		displayName = "AK6B (Green)";
-		dlc = "SAF2035_Mod";
-		scope = 2;
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\SPAR_03\Data\arifle_SPAR_03_khk_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_03\Data\arifle_SPAR_03_khk_F_02_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_khk_F_01_co.paa"};
-		picture = "\A3\Weapons_F_Exp\Rifles\SPAR_03\Data\UI\arifle_SPAR_03_khk_F_X_CA.paa";
+		class SAF
+		{
+			name = "Swedish Armed Forces 2035";
+			class M90_Infantry
+			{
+				name = "Infantry (M90)";
+				class SAF_M90_InfSquad
+				{
+					name = "Rifle Squad";
+					faction = "SAF";
+					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					side = 1;
+					class Unit0
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_TL";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_R";
+						rank="CORPORAL";
+						position[]={5,-5,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_ME";
+						rank="PRIVATE";
+						position[]={-5,-5,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_R";
+						rank="PRIVATE";
+						position[]={10,-10,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AT";
+						rank="SERGEANT";
+						position[]={-10,-10,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MA";
+						rank="CORPORAL";
+						position[]={15,-15,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={-15,-15,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AMG";
+						rank="PRIVATE";
+						position[]={20,-20,0};
+					};
+				};
+				class SAF_M90_FireTeam
+				{
+					name = "Fire Team";
+					faction = "SAF";
+					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					side = 1;
+					class Unit0
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_TL";
+						rank="CORPORAL";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_R";
+						rank="PRIVATE";
+						position[]={5,-5,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AT";
+						rank="PRIVATE";
+						position[]={-5,-5,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={10,-10,0};
+					};
+				};
+				class SAF_M90_ATTeam
+				{
+					name = "Anti-Armor Team";
+					faction = "SAF";
+					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					side = 1;
+					class Unit0
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_TL";
+						rank="CORPORAL";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MS";
+						rank="PRIVATE";
+						position[]={5,-5,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MS";
+						rank="PRIVATE";
+						position[]={-5,-5,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AMS";
+						rank="PRIVATE";
+						position[]={10,-10,0};
+					};
+				};
+				class SAF_M90_FirSupTeam
+				{
+					name = "Fire Support Team";
+					faction = "SAF";
+					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					side = 1;
+					class Unit0
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_TL";
+						rank="CORPORAL";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={5,-5,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={-5,-5,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AMG";
+						rank="PRIVATE";
+						position[]={10,-10,0};
+					};
+				};
+				class SAF_M90_AssSquad
+				{
+					name = "Assault Squad";
+					faction = "SAF";
+					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					side = 1;
+					class Unit0
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_TL";
+						rank="SERGEANT";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_R";
+						rank="CORPORAL";
+						position[]={5,-5,0};
+					};
+					class Unit2
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_ME";
+						rank="PRIVATE";
+						position[]={-5,-5,0};
+					};
+					class Unit3
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={10,-10,0};
+					};
+					class Unit4
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_R";
+						rank="SERGEANT";
+						position[]={-10,-10,0};
+					};
+					class Unit5
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AT";
+						rank="CORPORAL";
+						position[]={15,-15,0};
+					};
+					class Unit6
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_MG";
+						rank="PRIVATE";
+						position[]={-15,-15,0};
+					};
+					class Unit7
+					{
+						side=1;
+						vehicle="SAF_M90_Soldier_AMG";
+						rank="PRIVATE";
+						position[]={20,-20,0};
+					};
+				};
+			};
+		};
 	};
 };
