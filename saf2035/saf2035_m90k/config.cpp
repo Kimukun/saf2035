@@ -20,12 +20,9 @@ class CfgPatches
 			"SAF_M90K_Sniper",
 			"SAF_M90K_Spotter",
 			"SAF_M90K_Kitbag_base",
-			"SAF_M90K_Kitbag_ME",
 			"SAF_M90K_Kitbag_MS",
-			"SAF_M90K_Kitbag_Exp",
 			"SAF_M90K_Kitbag_AMG",
-			"SAF_M90K_Kitbag_AMS",
-			"SAF_M90K_Kitbag_SP"
+			"SAF_M90K_Kitbag_AMS"
 		};
 		weapons[] = {
 			"SAF_M90K_Uniform",
@@ -104,7 +101,7 @@ class CfgVehicles
 		engineer = 0;
 		faction = "saf";
 		hiddenSelections[] = {"camo","camo3","camo4"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Mark\INDEP\Data\ghillie_coverall_aaf_co.paa","\A3\Characters_F_Mark\Common\Data\ghillie_threads_lsh_ca.paa","\A3\Characters_F_Mark\Common\Data\ghillie_threads_5LOD_lsh_co.paa"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F_Mark\INDEP\Data\ghillie_coverall_aaf_co.paa","\A3\Characters_F_Mark\Common\Data\ghillie_threads_ard_ca.paa","\A3\Characters_F_Mark\Common\Data\ghillie_threads_5LOD_ard_co.paa"};
 		hideProxySelections[] = {"ghillie_hide"};
 		identityTypes[] = {"LanguageENG_F","Head_NATO","G_NATO_default"};
 		items[] = {};
@@ -290,7 +287,7 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90K_Soldier_MA: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_MA: SAF_M90K_Soldier_base
 	{
 		cost = 150000;
 		displayName = "Marksman";
@@ -377,7 +374,7 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90K_Soldier_ME: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_ME: SAF_M90K_Soldier_base
 	{
 		attendant = 1;
 		backpack = "SAF_M90K_Kitbag_base";
@@ -469,22 +466,22 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90_Soldier_TL: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_TL: SAF_M90K_Soldier_base
 	{
-		backpack = "SAF_M90_Kitbag_base";
+		backpack = "SAF_M90K_Kitbag_base";
 		cost=600000;
 		displayName="Team Leader";
 		icon="iconManOfficer";
 		linkedItems[]=
 		{
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[]=
 		{
@@ -517,14 +514,14 @@ class CfgVehicles
 		nameSound="veh_infantry_officer_s";
 		respawnLinkedItems[]=
 		{
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[]=
 		{
@@ -576,20 +573,20 @@ class CfgVehicles
 			"Rangefinder"
 		};
 	};
-	class SAF_M90_Soldier_AT: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_AT: SAF_M90K_Soldier_base
 	{
 		cost = 180000;
 		displayName = "Rifleman (AT)";
 		icon = "iconManAT";
 		linkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -613,14 +610,14 @@ class CfgVehicles
 		};
 		nameSound = "veh_infantry_AT_s";
 		respawnLinkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -667,26 +664,26 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90_Soldier_Exp: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_Exp: SAF_M90K_Soldier_base
 	{
-		backpack = "SAF_M90_Kitbag_base";
+		backpack = "SAF_M90K_Kitbag_base";
 		canDeactivateMines = 1;
 		cost = 115000;
 		detectSkill = 80;
 		displayName = "Explosive Specialist";
 		class eventHandlers {
-			init = "(_this select 0) execVM '\saf2035_m90\scripts\expbags.sqf';";
+			init = "(_this select 0) execVM '\saf2035_m90k\scripts\expbags.sqf';";
 		};
 		icon = "iconManExplosive";
 		linkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -710,14 +707,14 @@ class CfgVehicles
 		};
 		picture = "pictureExplosive";
 		respawnLinkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -757,20 +754,20 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90_Soldier_AMG: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_AMG: SAF_M90K_Soldier_base
 	{
-		backpack = "SAF_M90_Kitbag_AMG";
+		backpack = "SAF_M90K_Kitbag_AMG";
 		cost = 95000;
 		displayName = "Ass. Machinegunner";
 		linkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -794,14 +791,14 @@ class CfgVehicles
 			"Chemlight_green"
 		};
 		respawnLinkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -842,20 +839,20 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90_Soldier_MS: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_MS: SAF_M90K_Soldier_base
 	{
 		cost = 180000;
 		displayName = "Missile Specialist";
 		icon = "iconManAT";
 		linkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -879,14 +876,14 @@ class CfgVehicles
 		};
 		nameSound = "veh_infantry_AT_s";
 		respawnLinkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -910,7 +907,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"SAF_AK6_snd_R",
-			"SAF_Rb35_Grn",
+			"SAF_Rb35_Tan",
 			"Binocular",
 			"hgun_P07_F",
 			"Throw",
@@ -926,27 +923,27 @@ class CfgVehicles
 		threat[] = {1,0.69999999,0.30000001};
 		weapons[] = {
 			"SAF_AK6_snd_R",
-			"SAF_Rb35_Grn",
+			"SAF_Rb35_Tan",
 			"Binocular",
 			"hgun_P07_F",
 			"Throw",
 			"Put"
 		};
 	};
-	class SAF_M90_Soldier_AMS: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_AMS: SAF_M90K_Soldier_base
 	{
-		backpack = "SAF_M90_Kitbag_AMS";
+		backpack = "SAF_M90K_Kitbag_AMS";
 		cost = 95000;
 		displayName = "Ass. Missile Specialist";
 		linkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -970,14 +967,14 @@ class CfgVehicles
 			"Chemlight_green"
 		};
 		respawnLinkedItems[] = {
-			"SAF_M90_PC",
-			"SAF_M90_Helmet_ECH",
+			"SAF_M90K_PC",
+			"SAF_M90K_Helmet_ECH",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"30Rnd_556x45_Stanag_red",
@@ -1019,20 +1016,20 @@ class CfgVehicles
 		};
 	};
 	//Sniper Team config
-	class SAF_M90_Sniper: SAF_M90_Sniper_base
+	class SAF_M90K_Sniper: SAF_M90K_Sniper_base
 	{
-		backpack = "SAF_M90_Kitbag_base";
-		displayName = "Sniper (M90)";
+		backpack = "SAF_M90K_Kitbag_base";
+		displayName = "Sniper (M90K)";
 		icon = "iconManRecon";
 		linkedItems[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
+			"SAF_M90K_PC_lite",
+			"SAF_M90K_Boonie",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] = {
 			"7Rnd_408_Mag",
@@ -1052,14 +1049,14 @@ class CfgVehicles
 			"SmokeShell",
 		};
 		respawnLinkedItem[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
+			"SAF_M90K_PC_lite",
+			"SAF_M90K_Boonie",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		respawnMagazines[] = {
 			"7Rnd_408_Mag",
@@ -1098,99 +1095,20 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90L_Sniper: SAF_M90L_Sniper_base
+class SAF_M90K_Spotter: SAF_M90K_Sniper_base
 	{
-		backpack = "SAF_M90_Kitbag_base";
-		displayName = "Sniper (M90L)";
+		backpack = "SAF_M90K_Kitbag_base";
+		displayName = "Spotter (M90K)";
 		icon = "iconManRecon";
 		linkedItems[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
+			"SAF_M90K_PC_lite",
+			"SAF_M90K_Boonie",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_tna_F"
-		};
-		magazines[] = {
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"SmokeShellGreen",
-			"SmokeShellGreen",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"SmokeShell",
-			"SmokeShell",
-		};
-		respawnLinkedItem[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"ItemGPS",
-			"NVGoggles_tna_F"
-		};
-		respawnMagazines[] = {
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"7Rnd_408_Mag",
-			"SmokeShellGreen",
-			"SmokeShellGreen",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"SmokeShell",
-			"SmokeShell",
-		};
-		respawnWeapons[] = {
-			"SAF_PSG25_SS",
-			"hgun_P07_F",
-			"Rangefinder",
-			"Throw",
-			"Put"
-		};
-		role = "Marksman";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		threat[] = {1,0.1,0.3};
-		weapons[] = {
-			"SAF_PSG25_SS",
-			"hgun_P07_F",
-			"Rangefinder",
-			"Throw",
-			"Put"
-		};
-	};
-	class SAF_M90_Spotter: SAF_M90_Sniper_base
-	{
-		backpack = "SAF_M90_Kitbag_base";
-		displayName = "Spotter (M90)";
-		icon = "iconManRecon";
-		linkedItems[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"ItemGPS",
-			"NVGoggles_INDEP"
+			"NVGoogles"
 		};
 		magazines[] =
 		{
@@ -1222,118 +1140,14 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] =
 		{
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
+			"SAF_M90K_PC_lite",
+			"SAF_M90K_Boonie",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"ItemRadio",
 			"ItemGPS",
-			"NVGoggles_INDEP"
-		};
-		respawnMagazines[] =
-		{
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"SmokeShellGreen",
-			"SmokeShellGreen",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"SmokeShell",
-			"SmokeShell",
-			"Laserbatteries"
-		};
-		respawnWeapons[] =
-		{
-			"SAF_AK6GL_snd_SP",
-			"hgun_P07_F",
-			"Laserdesignator_03",
-			"Throw",
-			"Put"
-		};
-		role = "Marksman";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		threat[] = {1,0.1,0.30000001};
-		weapons[] =
-		{
-			"SAF_AK6GL_snd_SP",
-			"hgun_P07_F",
-			"Laserdesignator_03",
-			"Throw",
-			"Put"
-		};
-	};
-	class SAF_M90L_Spotter: SAF_M90L_Sniper_base
-	{
-		backpack = "SAF_M90_Kitbag_base";
-		displayName = "Spotter (M90L)";
-		icon = "iconManRecon";
-		linkedItems[] = {
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"ItemGPS",
-			"NVGoggles_tna_F"
-		};
-		magazines[] =
-		{
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"30Rnd_556x45_Stanag",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"SmokeShellGreen",
-			"SmokeShellGreen",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"SmokeShell",
-			"SmokeShell",
-			"Laserbatteries"
-		};
-		respawnLinkedItems[] =
-		{
-			"SAF_M90_PC_lite",
-			"SAF_M90_Boonie",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemRadio",
-			"ItemGPS",
-			"NVGoggles_tna_F"
+			"NVGoogles"
 		};
 		respawnMagazines[] =
 		{
@@ -1388,21 +1202,21 @@ class CfgVehicles
 	//Base Backpack
 	class B_Kitbag_Base;
 	class B_AssaultPack_Base;
-	class SAF_M90_Kitbag_base: B_Kitbag_Base
+	class SAF_M90K_Kitbag_base: B_Kitbag_Base
 	{
 		author = "Kimukun";
-		baseBackpack = "SAF_M90_Kitbag_base";
-		displayName = "M90 Kitbag";
+		baseBackpack = "SAF_M90K_Kitbag_base";
+		displayName = "M90K Kitbag";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\backpack\m90_kitbag.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\backpack\m90k_kitbag.paa"};
 		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_kitbag_rgr.paa";
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
 	};
 	//Backpack-Loadouts
-		class SAF_M90_Kitbag_MS: SAF_M90_Kitbag_base
+		class SAF_M90K_Kitbag_MS: SAF_M90K_Kitbag_base
 	{
 		scope=1;
 		scopeArsenal=0;
@@ -1416,7 +1230,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SAF_M90_Kitbag_AMG: SAF_M90_Kitbag_base
+	class SAF_M90K_Kitbag_AMG: SAF_M90K_Kitbag_base
 	{
 		scope=1;
 		scopeArsenal=0;
@@ -1430,7 +1244,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SAF_M90_Kitbag_AMS: SAF_M90_Kitbag_base
+	class SAF_M90K_Kitbag_AMS: SAF_M90K_Kitbag_base
 	{
 		scope=1;
 		scopeArsenal=0;
@@ -1455,27 +1269,27 @@ class cfgWeapons
 	//Base Uniforms
 	class UniformItem;
 	class Uniform_Base;
-	class SAF_M90_Uniform: Uniform_Base
+	class SAF_M90K_Uniform: Uniform_Base
 	{
 		author = "Kimukun";
 		scope = 2;
-		displayName = "M90 Uniform";
+		displayName = "M90K Uniform";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035_m90\data\ui\uniform_m90_icon.paa";
+		picture = "\saf2035_m90k\data\ui\uniform_m90k_icon.paa";
 		model = "\A3\characters_f_beta\INDEP\ia_soldier_01.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\uniform\m90_uniform.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\uniform\m90k_uniform.paa"};
 		class ItemInfo: UniformItem
 		{
-			uniformClass = "SAF_M90_Soldier_base";
+			uniformClass = "SAF_M90K_Soldier_base";
 			containerClass = "Supply40";
 			mass = 40;
 		};
 	};
-	class SAF_M90_Sniper_FullGhillie: Uniform_Base
+	class SAF_M90K_Sniper_FullGhillie: Uniform_Base
 	{
 		author = "Kimukun";
-		displayName = "Full Ghillie (M90)";
+		displayName = "Full Ghillie (M90K)";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
@@ -1486,37 +1300,20 @@ class cfgWeapons
 		{
 			containerClass = "Supply60";
 			mass = 80;
-			uniformClass = "SAF_M90_Sniper_base";
-		};
-	};
-	class SAF_M90L_Sniper_FullGhillie: Uniform_Base
-	{
-		author = "Kimukun";
-		displayName = "Full Ghillie (M90L)";
-		dlc = "SAF2035_Mod";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		picture = "\A3\characters_f_exp\data\ui\icon_U_B_FullGhillie_tna_ca.paa";
-		scope = 2;
-		class ItemInfo: UniformItem
-		{
-			containerClass = "Supply60";
-			mass = 80;
-			uniformClass = "SAF_M90L_Sniper_base";
+			uniformClass = "SAF_M90K_Sniper_base";
 		};
 	};
 	//Vests
 	class VestItem;
 	class V_PlateCarrier1_rgr;
 	class V_PlateCarrier2_rgr;
-	class SAF_M90_PC: V_PlateCarrier1_rgr
+	class SAF_M90K_PC: V_PlateCarrier1_rgr
 	{
 		author = "Kimukun";
-		displayName = "M90 Platecarrier";
+		displayName = "M90K Platecarrier";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\vest\m90_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\vest\m90k_vest.paa"};
 		class ItemInfo: VestItem
 		{
 			_generalMacro = "VestItem";
@@ -1558,13 +1355,13 @@ class cfgWeapons
 			};
 		};
 	};
-	class SAF_M90_PC_lite: V_PlateCarrier1_rgr
+	class SAF_M90K_PC_lite: V_PlateCarrier1_rgr
 	{
 		author = "Kimukun";
-		displayName = "M90 Platecarrier Lite";
+		displayName = "M90K Platecarrier Lite";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\vest\m90_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\vest\m90k_vest.paa"};
 		class ItemInfo: VestItem
 		{
 			_generalMacro = "VestItem";
@@ -1606,13 +1403,13 @@ class cfgWeapons
 			};
 		};
 	};
-	class SAF_M90_PC_spec: V_PlateCarrier1_rgr
+	class SAF_M90K_PC_spec: V_PlateCarrier1_rgr
 	{
 		author = "Kimukun";
-		displayName = "M90 Platecarrier Special";
+		displayName = "M90K Platecarrier Special";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\vest\m90_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\vest\m90k_vest.paa"};
 		class ItemInfo: VestItem
 		{
 			_generalMacro = "VestItem";
@@ -1657,15 +1454,15 @@ class cfgWeapons
 	//Headgear
 	class H_HelmetB;
 	class HeadgearItem;
-	class SAF_M90_Helmet_ECH: H_HelmetB
+	class SAF_M90K_Helmet_ECH: H_HelmetB
 	{
 		author = "Kimukun";
-		displayName = "M90 ECH";
+		displayName = "M90K ECH";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035_m90\data\ui\echM90.paa";
+		picture = "\saf2035_m90k\data\ui\echM90k.paa";
 		model = "A3\Characters_F\BLUFOR\headgear_b_helmet_ballistic";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\headgear\m90_helmet.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\headgear\m90k_helmet.paa"};
 		class ItemInfo: HeadgearItem
 		{
 			mass = 20;
@@ -1684,15 +1481,15 @@ class cfgWeapons
 			};
 		};
 	};
-	class SAF_M90_Helmet_ECH_lite: H_HelmetB
+	class SAF_M90K_Helmet_ECH_lite: H_HelmetB
 	{
 		author = "Kimukun";
-		displayName = "M90 ECH Lite";
+		displayName = "M90K ECH Lite";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035_m90\data\ui\echM90.paa";
+		picture = "\saf2035_m90k\data\ui\echM90k.paa";
 		model = "A3\Characters_F\BLUFOR\headgear_b_helmet_light";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\headgear\m90_helmet.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\headgear\m90k_helmet.paa"};
 		class ItemInfo: HeadgearItem
 		{
 			mass = 20;
@@ -1711,15 +1508,15 @@ class cfgWeapons
 			};
 		};
 	};
-	class SAF_M90_Boonie: H_HelmetB
+	class SAF_M90K_Boonie: H_HelmetB
 	{
 		author = "Kimukun";
-		displayName = "M90 Boonie";
+		displayName = "M90K Boonie";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035_m90\data\ui\boonieM90.paa";
+		picture = "\saf2035_m90k\data\ui\boonieM90k.paa";
 		model = "A3\Characters_F\Common\booniehat";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_m90\data\headgear\m90_boonie.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_m90k\data\headgear\m90k_boonie.paa"};
 		class ItemInfo: HeadgearItem
 		{
 			mass = 20;
@@ -1746,10 +1543,10 @@ class cfgGroups
 		class SAF
 		{
 			name = "Swedish Armed Forces 2035";
-			class M90_Infantry
+			class M90K_Infantry
 			{
-				name = "Infantry (M90)";
-				class SAF_M90_InfSquad
+				name = "Infantry (M90K)";
+				class SAF_M90K_InfSquad
 				{
 					name = "Rifle Squad";
 					faction = "SAF";
@@ -1758,61 +1555,61 @@ class cfgGroups
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_TL";
+						vehicle="SAF_M90K_Soldier_TL";
 						rank="SERGEANT";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_R";
+						vehicle="SAF_M90K_Soldier_R";
 						rank="CORPORAL";
 						position[]={5,-5,0};
 					};
 					class Unit2
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_ME";
+						vehicle="SAF_M90K_Soldier_ME";
 						rank="PRIVATE";
 						position[]={-5,-5,0};
 					};
 					class Unit3
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_R";
+						vehicle="SAF_M90K_Soldier_R";
 						rank="PRIVATE";
 						position[]={10,-10,0};
 					};
 					class Unit4
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AT";
+						vehicle="SAF_M90K_Soldier_AT";
 						rank="SERGEANT";
 						position[]={-10,-10,0};
 					};
 					class Unit5
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MA";
+						vehicle="SAF_M90K_Soldier_MA";
 						rank="CORPORAL";
 						position[]={15,-15,0};
 					};
 					class Unit6
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={-15,-15,0};
 					};
 					class Unit7
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AMG";
+						vehicle="SAF_M90K_Soldier_AMG";
 						rank="PRIVATE";
 						position[]={20,-20,0};
 					};
 				};
-				class SAF_M90_FireTeam
+				class SAF_M90K_FireTeam
 				{
 					name = "Fire Team";
 					faction = "SAF";
@@ -1821,33 +1618,33 @@ class cfgGroups
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_TL";
+						vehicle="SAF_M90K_Soldier_TL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_R";
+						vehicle="SAF_M90K_Soldier_R";
 						rank="PRIVATE";
 						position[]={5,-5,0};
 					};
 					class Unit2
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AT";
+						vehicle="SAF_M90K_Soldier_AT";
 						rank="PRIVATE";
 						position[]={-5,-5,0};
 					};
 					class Unit3
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={10,-10,0};
 					};
 				};
-				class SAF_M90_ATTeam
+				class SAF_M90K_ATTeam
 				{
 					name = "Anti-Armor Team";
 					faction = "SAF";
@@ -1856,33 +1653,33 @@ class cfgGroups
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_TL";
+						vehicle="SAF_M90K_Soldier_TL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MS";
+						vehicle="SAF_M90K_Soldier_MS";
 						rank="PRIVATE";
 						position[]={5,-5,0};
 					};
 					class Unit2
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MS";
+						vehicle="SAF_M90K_Soldier_MS";
 						rank="PRIVATE";
 						position[]={-5,-5,0};
 					};
 					class Unit3
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AMS";
+						vehicle="SAF_M90K_Soldier_AMS";
 						rank="PRIVATE";
 						position[]={10,-10,0};
 					};
 				};
-				class SAF_M90_FirSupTeam
+				class SAF_M90K_FirSupTeam
 				{
 					name = "Fire Support Team";
 					faction = "SAF";
@@ -1891,33 +1688,33 @@ class cfgGroups
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_TL";
+						vehicle="SAF_M90K_Soldier_TL";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={5,-5,0};
 					};
 					class Unit2
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={-5,-5,0};
 					};
 					class Unit3
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AMG";
+						vehicle="SAF_M90K_Soldier_AMG";
 						rank="PRIVATE";
 						position[]={10,-10,0};
 					};
 				};
-				class SAF_M90_AssSquad
+				class SAF_M90K_AssSquad
 				{
 					name = "Assault Squad";
 					faction = "SAF";
@@ -1926,56 +1723,56 @@ class cfgGroups
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_TL";
+						vehicle="SAF_M90K_Soldier_TL";
 						rank="SERGEANT";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_R";
+						vehicle="SAF_M90K_Soldier_R";
 						rank="CORPORAL";
 						position[]={5,-5,0};
 					};
 					class Unit2
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_ME";
+						vehicle="SAF_M90K_Soldier_ME";
 						rank="PRIVATE";
 						position[]={-5,-5,0};
 					};
 					class Unit3
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={10,-10,0};
 					};
 					class Unit4
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_R";
+						vehicle="SAF_M90K_Soldier_R";
 						rank="SERGEANT";
 						position[]={-10,-10,0};
 					};
 					class Unit5
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AT";
+						vehicle="SAF_M90K_Soldier_AT";
 						rank="CORPORAL";
 						position[]={15,-15,0};
 					};
 					class Unit6
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_MG";
+						vehicle="SAF_M90K_Soldier_MG";
 						rank="PRIVATE";
 						position[]={-15,-15,0};
 					};
 					class Unit7
 					{
 						side=1;
-						vehicle="SAF_M90_Soldier_AMG";
+						vehicle="SAF_M90K_Soldier_AMG";
 						rank="PRIVATE";
 						position[]={20,-20,0};
 					};
@@ -1984,23 +1781,23 @@ class cfgGroups
 			class SAF_SniperTeam
 			{
 				name = "Sniper Teams";
-				class SAF_M90_SniperTeam
+				class SAF_M90K_SniperTeam
 				{
-					name = "Sniper Team (M90)";
+					name = "Sniper Team (M90K)";
 					faction = "SAF";
 					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
 					side = 1;
 					class Unit0
 					{
 						side=1;
-						vehicle="SAF_M90_Sniper";
+						vehicle="SAF_M90K_Sniper";
 						rank="CORPORAL";
 						position[]={0,0,0};
 					};
 					class Unit1
 					{
 						side=1;
-						vehicle="SAF_M90_Spotter";
+						vehicle="SAF_M90K_Spotter";
 						rank="PRIVATE";
 						position[]={5,0,0};
 					};

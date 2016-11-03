@@ -23,12 +23,9 @@ class CfgPatches
 			"SAF_M90_Sniper",
 			"SAF_M90_Spotter",
 			"SAF_M90_Kitbag_base",
-			"SAF_M90_Kitbag_ME",
 			"SAF_M90_Kitbag_MS",
-			"SAF_M90_Kitbag_Exp",
 			"SAF_M90_Kitbag_AMG",
-			"SAF_M90_Kitbag_AMS",
-			"SAF_M90_Kitbag_SP"
+			"SAF_M90_Kitbag_AMS"
 		};
 		weapons[] = {
 			"SAF_M90_Uniform",
