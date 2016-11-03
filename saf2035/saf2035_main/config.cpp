@@ -513,6 +513,13 @@ class cfgWeapons
 		};
 	};
 };
+class CfgEditorSubcategories
+{
+	class EdSubcat_Personnel_Snipers
+	{
+		displayName = "Men (Sniper Team)";
+	};
+};
 class CfgMarkers
 {
 	class flag_NATO;
@@ -521,5 +528,15 @@ class CfgMarkers
 		name = "Sweden";
 		icon = "\saf2035_main\data\ui\sweden_marker.paa";
 		texture = "\saf2035_main\data\ui\sweden_marker.paa";
+	};
+};
+class CfgUnitInsignia
+{
+	class Swe_Insig
+	{
+		displayName="Swedish Insignia";
+		author="Kimukun";
+		texture="\saf2035_main\data\insignia\insignia.paa";
+		textureVehicle="";
 	};
 };
