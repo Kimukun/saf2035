@@ -1056,13 +1056,13 @@ class cfgGroups {
           };
           class Unit3 {
             side = 1;
-            vehicle = "SAF_Scorpion_SOG_SMM";
+            vehicle = "SAF_Scorpion_SOG_SME";
             rank = "SERGEANT";
             position[] = {10,-10,0};
           };
           class Unit4 {
             side = 1;
-            vehicle = "SAF_Scorpion_SOG_SDemo";
+            vehicle = "SAF_Scorpion_SOG_SAT";
             rank = "SERGEANT";
             position[] = {-10,-10,0};
           };
