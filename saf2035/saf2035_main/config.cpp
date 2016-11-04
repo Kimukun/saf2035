@@ -390,7 +390,7 @@ class cfgWeapons
 			};
 			class LinkedItemsOptic
 			{
-				item = "optic_ERCO_khk_F";
+				item = "optic_ERCO_snd_F";
 				slot = "CowsSlot";
 			};
 		};

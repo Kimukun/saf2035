@@ -60,7 +60,7 @@ class CfgVehicles
 		cost = 100000;
 		detectSkill = 20;
 		dispalyName = "Should not Show in Editor";
-		editorSubcategory = "EdSubcat_Personnel";
+		editorSubcategory = "EdSubcat_Personnel_Camo_Desert";
 		engineer = 0;
 		faction = "saf";
 		hiddenSelections[] = {"Camo"};
@@ -209,7 +209,7 @@ class CfgVehicles
 			"Put"
 		};
 	};
-	class SAF_M90K_Soldier_MG: SAF_M90_Soldier_base
+	class SAF_M90K_Soldier_MG: SAF_M90K_Soldier_base
 	{
 		cost = 125000;
 		displayName = "Machinegunner";
