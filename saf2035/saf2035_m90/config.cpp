@@ -1720,7 +1720,7 @@ class cfgGroups {
 				class SAF_M90_InfSquad {
 					name = "Rifle Squad";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1774,7 +1774,7 @@ class cfgGroups {
 				class SAF_M90_FireTeam {
 					name = "Fire Team";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1804,7 +1804,7 @@ class cfgGroups {
 				class SAF_M90_ATTeam {
 					name = "Anti-Armor Team";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1834,7 +1834,7 @@ class cfgGroups {
 				class SAF_M90_FirSupTeam {
 					name = "Fire Support Team";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1864,7 +1864,7 @@ class cfgGroups {
 				class SAF_M90_AssSquad {
 					name = "Assault Squad";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1921,7 +1921,7 @@ class cfgGroups {
 				class SAF_M90_SniperTeam {
 					name = "Sniper Team (M90)";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
 					side = 1;
 					class Unit0 {
 						side=1;
@@ -1939,7 +1939,7 @@ class cfgGroups {
 				class SAF_M90L_SniperTeam {
 					name = "Sniper Team (M90L)";
 					faction = "SAF";
-					icon = "\A3\ui_f\data\map\markers\nato\n_inf.paa";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
 					side = 1;
 					class Unit0 {
 						side=1;

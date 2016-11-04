@@ -285,7 +285,7 @@ class cfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_m";
+				item = "muzzle_snds_M";
 				slot = "MuzzleSlot";
 			};
 			class LinkedItemsOptic
