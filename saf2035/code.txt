@@ -1,0 +1,74 @@
+class ARC_Common_Snow_Helmet_G: H_HelmetB_camo
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "(ARC) Common Camo MICH 2000 (Snow)";
+		model = "\A3\Characters_F\BLUFOR\headgear_b_helmet_camo";
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"\Common_items\data\Helmet\Common_Snow_equip.paa","\A3\characters_f\common\data\ghillie2_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\A3\Characters_F\BLUFOR\headgear_b_helmet_camo";
+			hiddenSelections[] = {"camo1","camo2"};
+			armor = 5;
+			mass = 50;
+			passthrough = 0.5;
+		};
+	};
+
+
+
+	class ARC_UN_M2000: H_HelmetIA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "(ARC) Common UN PASGT";
+		picture = "\Common_items\data\UI\icon_Common_UN_MICH.paa";
+		model = "\A3\Characters_F_Beta\INDEP\headgear_helmet_canvas";
+		hiddenSelectionsTextures[] = {"\Common_items\data\Helmet\MICH2000_UN.paa"};
+		class ItemInfo: ItemInfo
+		{
+			allowedslots[] = {901,605};
+			armor = 4;
+			mass = 40;
+			modelsides[] = {2,3};
+			passthrough = 0.5;
+			uniformmodel = "\A3\Characters_F_Beta\INDEP\headgear_helmet_canvas.p3d";
+		};
+	};
+
+
+
+	class H_Beret_02;
+	class ARC_Beret_UN: H_Beret_02
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "(ARC) Beret UN";
+		hiddenSelectionsTextures[] = {"Common_items\data\Beret\ARC_beret_UN.paa"};
+	};
+
+
+
+class CfgGlasses
+{
+	class None;
+	class G_Balaclava_blk;
+	class ARC_Common_Snow_Balaclava: G_Balaclava_blk
+	{
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Soronelite";
+		_generalMacro = "ARC_Common_Snow_Balaclava";
+		displayName = "(ARC) Common Balaclava (Snow)";
+		model = "\A3\Characters_F_Bootcamp\Guerrilla\g_balaclava_clean.p3d";
+		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_G_Balaclava_olive_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\Common_items\data\Balaclava\Snow_balaclava.paa"};
+		identityTypes[] = {};
+	};
+};
