@@ -11,9 +11,6 @@ class CfgPatches {
 			"SAF_MC_SOG_STL",
 			"SAF_MC_SOG_SMG",
       "SAF_SOG_DDiver_STL",
-      "SAF_SOG_DDiver_SDemo",
-      "SAF_SOG_DDiver_SME",
-      "SAF_SOG_DDiver_SMG",
       "SAF_MC_Kitbag_base",
       "SAF_MC_CompactBag_base",
       "SAF_MC_CompactBag_OP",
@@ -62,7 +59,8 @@ class CfgVehicles {
 		engieneer = 0;
 		faction = "SAF";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_sog\data\uniform\mc_cyre.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\uniform\crye_g3_MC_co.paa"};
+    hiddenSelectionsMaterials[] = {"\saf2035_sog\data\uniform\crye_g3.rvmat"};
 		icon="iconMan";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","G_NATO_default"};
 		items[] = {};
@@ -166,7 +164,7 @@ class CfgVehicles {
     weapons[] = {"Throw","Put"};
   };
   // SOG Soldier Config
-  class SAF_MC_SOG_SAT: SAF_MC_Soldier_base {
+  class SAF_MC_SOG_SAT: SAF_MC_C_Soldier_base {
 		backpack = "SAF_MC_CompactBag_OP";
 		displayName = "Specialist";
     linkedItems[] = {
@@ -259,7 +257,7 @@ class CfgVehicles {
 			"Put"
 		};
 	};
-	class SAF_MC_SOG_SDemo: SAF_MC_Soldier_base {
+	class SAF_MC_SOG_SDemo: SAF_MC_C_Soldier_base {
 		backpack = "SAF_MC_Kitbag_base";
 		displayName = "Specialist (Demo)";
 		class eventHandlers {
@@ -438,7 +436,7 @@ class CfgVehicles {
 			"Put"
 		};
 	};
-	class SAF_MC_SOG_SME: SAF_MC_Soldier_base {
+	class SAF_MC_SOG_SME: SAF_MC_C_Soldier_base {
 		backpack = "SAF_MC_Kitbag_base";
 		displayName = "Specialist (Medic)";
 		class eventHandlers {
@@ -530,7 +528,7 @@ class CfgVehicles {
 			"Put"
 		};
 	};
-	class SAF_MC_SOG_STL: SAF_MC_Soldier_base {
+	class SAF_MC_SOG_STL: SAF_MC_C_Soldier_base {
 		backpack = "SAF_MC_Kitbag_TL";
 		displayName="Specialist (Team Leader)";
 		class eventHandlers {
@@ -622,7 +620,7 @@ class CfgVehicles {
 			"Put"
 		};
 	};
-	class SAF_MC_SOG_MG: SAF_MC_Soldier_base {
+	class SAF_MC_SOG_MG: SAF_MC_C_Soldier_base {
 		backpack = "SAF_MC_Kitbag_MG";
 		displayName = "Specialist (MG)";
 		linkedItems[] = {
@@ -699,7 +697,7 @@ class CfgVehicles {
 			"Put"
 		};
 	};
-  class SAF_SOG_DDiver_STL: SAF_SOG_Diver_base {
+  class SAF_SOG_DDiver_STL: SAF_SOG_DDiver_base {
     backpack = "SAF_VH_Blk_S";
 		displayName="Specialist (Team Leader)";
 		class eventHandlers {
@@ -877,12 +875,12 @@ class cfgWeapons {
   class SAF_MC_Uniform: Uniform_Base {
 		author = "Kimukun";
 		scope = 2;
-		displayName = "Multicam (Crye)";
+		displayName = "Multicam (Crye G3)";
 		dlc = "SAF2035_Mod";
-		picture = "\A3\characters_f\Data\UI\icon_f_b_combatuniform_ocam_ca.paa";
+		picture = "\saf2035\data\ui\crye_g3_MC_ca.paa";
 		model = "\A3\Characters_F\BLUFOR\b_soldier_01.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_sog\data\uniform\mc_cyre.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\uniform\crye_g3_MC_co.paa"};
 		class ItemInfo: UniformItem {
 			uniformClass = "SAF_MC_C_Soldier_base";
 			containerClass = "Supply40";
@@ -1043,10 +1041,10 @@ class cfgWeapons {
 		author = "Kimukun";
 		displayName = "Multicam ECH Lite";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035\data\ui\echM90.paa";
+	//	picture = "\saf2035\data\ui\echM90.paa";
 		model = "A3\Characters_F\BLUFOR\headgear_b_helmet_light";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\mc_helmet.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\ech_MC_co.paa"};
 		class ItemInfo: HeadgearItem {
 			mass = 20;
 			allowedSlots[] = {901,605};
@@ -1066,10 +1064,33 @@ class cfgWeapons {
 		author = "Kimukun";
 		displayName = "Multicam Boonie";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035\data\ui\boonieMC.paa";
+		picture = "\saf2035\data\ui\boonie_MC_ca.paa";
 		model = "A3\Characters_F\Common\booniehat";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\mc_boonie.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\boonie_MC_co.paa"};
+		class ItemInfo: HeadgearItem {
+			mass = 20;
+			allowedSlots[] = {901,605};
+			uniformModel = "A3\Characters_F\Common\booniehat";
+			modelSides[] = {3,1};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo {
+				class Head {
+					hitpointName = "HitHead";
+					armor = 6;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
+  class SAF_MCTropic_Boonie: H_HelmetB {
+		author = "Kimukun";
+		displayName = "Multicam Tropic Boonie";
+		dlc = "SAF2035_Mod";
+		picture = "\saf2035\data\ui\boonie_MCTropic_ca.paa";
+		model = "A3\Characters_F\Common\booniehat";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\boonie_MCTropic_co.paa"};
 		class ItemInfo: HeadgearItem {
 			mass = 20;
 			allowedSlots[] = {901,605};
