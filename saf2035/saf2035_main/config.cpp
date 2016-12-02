@@ -105,7 +105,7 @@ class cfgWeapons
 	class LMG_03_base_F;
 	class srifle_LRR_F;
 	class launch_NLAW_F;
-	class SMG_05_F;
+	class SMG_05_base_F;
 	class launch_B_Titan_short_F;
 	class launch_I_Titan_short_F;
 	class hgun_P07_khk_F;
@@ -217,7 +217,7 @@ class cfgWeapons
 		dlc = "SAF2035_Mod";
 		scope = 2;
 	}
-	class SAF_MP5K_base: SMG_05_F
+	class SAF_MP5K_base: SMG_05_base_F
 	{
 		author = "Kimukun";
 		displayName = "MP5K";

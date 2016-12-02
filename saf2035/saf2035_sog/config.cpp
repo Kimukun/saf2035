@@ -1,7 +1,7 @@
 class CfgPatches {
   class SAF_SOG_CONFIG {
     units[] = {
-      "SAF_MC_Soldier_base",
+      "SAF_MC_C_Soldier_base",
       "SAF_SOG_DDiver_base",
       "SAF_SOG_ADiver_base",
       "SAF_MC_SOG_SAT",
@@ -779,7 +779,7 @@ class CfgVehicles {
 		displayName = "MC W2 Kitbag";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_sog\data\backpack\mc_kitbag.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\backpack\fastpack_MC_01_co.paa"};
 		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_kitbag_rgr.paa";
 		scope = 2;
 		scopeCurator = 2;
@@ -791,7 +791,7 @@ class CfgVehicles {
 		displayName = "MC W2 Compact Bag";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035_sog\data\backpack\mc_compact.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\backpack\assaultpack_MC_01_co.paa"};
 		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_kitbag_rgr.paa";
 		scope = 2;
 		scopeCurator = 2;
@@ -877,7 +877,7 @@ class cfgWeapons {
 		scope = 2;
 		displayName = "Multicam (Crye G3)";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035\data\ui\crye_g3_MC_ca.paa";
+		picture = "\saf2035_sog\data\ui\crye_g3_MC_ca.paa";
 		model = "\A3\Characters_F\BLUFOR\b_soldier_01.p3d";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\saf2035_sog\data\uniform\crye_g3_MC_co.paa"};
@@ -914,7 +914,7 @@ class cfgWeapons {
 		displayName = "Multicam Platecarrier";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\vest\mc_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\vest\platecarrier_MC_01_co.paa"};
 		class ItemInfo: VestItem {
 			_generalMacro = "VestItem";
 			author = "Kimukun";
@@ -955,7 +955,7 @@ class cfgWeapons {
 		displayName = "Multicam Platecarrier Lite";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\vest\mc_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\vest\platecarrier_MC_01_co.paa"};
 		class ItemInfo: VestItem {
 			_generalMacro = "VestItem";
 			author = "Kimukun";
@@ -997,7 +997,7 @@ class cfgWeapons {
 		displayName = "Multicam Platecarrier Special";
 		dlc = "SAF2035_Mod";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\vest\mc_vest.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\vest\platecarrier_MC_01_co.paa"};
 		class ItemInfo: VestItem {
 			_generalMacro = "VestItem";
 			author = "Kimukun";
@@ -1044,7 +1044,7 @@ class cfgWeapons {
 	//	picture = "\saf2035\data\ui\echM90.paa";
 		model = "A3\Characters_F\BLUFOR\headgear_b_helmet_light";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\ech_MC_co.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\headgear\ech_MC_co.paa"};
 		class ItemInfo: HeadgearItem {
 			mass = 20;
 			allowedSlots[] = {901,605};
@@ -1067,7 +1067,7 @@ class cfgWeapons {
 		picture = "\saf2035\data\ui\boonie_MC_ca.paa";
 		model = "A3\Characters_F\Common\booniehat";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\boonie_MC_co.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\headgear\boonie_MC_co.paa"};
 		class ItemInfo: HeadgearItem {
 			mass = 20;
 			allowedSlots[] = {901,605};
@@ -1087,10 +1087,10 @@ class cfgWeapons {
 		author = "Kimukun";
 		displayName = "Multicam Tropic Boonie";
 		dlc = "SAF2035_Mod";
-		picture = "\saf2035\data\ui\boonie_MCTropic_ca.paa";
+		picture = "\saf2035_sog\data\ui\boonie_MCTropic_ca.paa";
 		model = "A3\Characters_F\Common\booniehat";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\saf2035\data\headgear\boonie_MCTropic_co.paa"};
+		hiddenSelectionsTextures[] = {"\saf2035_sog\data\headgear\boonie_MCTropic_co.paa"};
 		class ItemInfo: HeadgearItem {
 			mass = 20;
 			allowedSlots[] = {901,605};
